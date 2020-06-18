@@ -1,9 +1,6 @@
 import React from 'react';
 import Card from './Card'
 const CardList=({robots,click})=>{
-    if(true){
-        alert("eaf");
-    }
     return(
     <div>
         {
