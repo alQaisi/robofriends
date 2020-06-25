@@ -26,8 +26,8 @@ class App extends Component{
 }
     randomImages=()=>{
         const {robots}=this.state;
-        robots.forEach(robot=>robot.id+=Math.floor(Math.random() * 101))
-        this.setState({robots:robots,robotname:''});
+        robots.forEach((robot,index)=>robot.id=Math.floor(Math.random() * ( (index+1)*30 - index*30 ))+index*30)
+        this.setState({robots:robots,searchfield:'',robotname:''});
     }
     
     render(){
