@@ -25,12 +25,11 @@ class App extends Component{
         this.setState({robotname:data})
 }
     randomImages=()=>{
-        const randomRobots=this.state.robots.map(robot=>{
-            robot.id+=Math.floor(Math.random() * 101);
-            return robot;
-        })
-        this.setState({robots:randomRobots,robotname:''});
+        const {robots}=this.state;
+        robots.forEach(robot=>robot.id+=Math.floor(Math.random() * 101))
+        this.setState({robots:robots,robotname:''});
     }
+    
     render(){
         const {robots,searchfield,robotname}=this.state;
         const filteredRobots=robots.filter(robot=>{
