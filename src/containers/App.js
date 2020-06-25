@@ -42,7 +42,7 @@ class App extends Component{
                 <div className="tc">
                     <h1 className="f1 sega">robofriends</h1>
                     <h3 className="f4">{robotname}</h3>
-                    <button className="f4 link dim ph3 pv2 mb2 dib white bg-blue" style={{border:'5px',borderRadius:'25px'}} onClick={this.randomImages}>random</button>
+                    <button className="f4 link dim ph3 pv2 mb2 dib white bg-blue" style={{border:'5px',borderRadius:'25px'}} onClick={this.randomImages}>random</button>{' '}
                     <SearchBox searchChange={this.onSearchChange} />
                     <Scroll greedting="hi">
                     <ErrorBoundry>
